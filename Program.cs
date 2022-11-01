@@ -2,26 +2,40 @@
 
 namespace Day5Assign
 {
-    class Program
+
+    public class Exercise8
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            // declare variable
-            int n;
+            int num1, num2, num3;
+            Console.Write("\n\n");
+            Console.Write("Find the largest of three numbers:\n");
+            Console.Write("------------------------------------");
+            Console.Write("\n\n");
 
-            //take input 
-            Console.Write("Enter the number = ");
-            n = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Input the 1st number :");
+            num1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Input the  2nd number :");
+            num2 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Input the 3rd  number :");
+            num3 = Convert.ToInt32(Console.ReadLine());
 
-            //check if n is even or odd 
-            if (n % 2 == 0)
-                Console.WriteLine(n + " is even");
+            if (num1 > num2)
+            {
+                if (num1 > num3)
+                {
+                    Console.Write("The 1st Number is the greatest among three. \n\n");
+                }
+                else
+                {
+                    Console.Write("The 3rd Number is the greatest among three. \n\n");
+                }
+            }
+            else if (num2 > num3)
+                Console.Write("The 2nd Number is the greatest among three \n\n");
             else
-                Console.WriteLine(n + " is odd");
-
-            // wait for user to press any key
-            Console.ReadKey();
+                Console.Write("The 3rd Number is the greatest among three \n\n");
         }
+
     }
 }
-
