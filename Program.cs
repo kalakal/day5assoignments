@@ -2,40 +2,22 @@
 
 namespace Day5Assign
 {
-
-    public class Exercise8
+public class SwapNumbers
+{
+    public static void Main(string[] args)
     {
-        public static void Main()
-        {
-            int num1, num2, num3;
-            Console.Write("\n\n");
-            Console.Write("Find the largest of three numbers:\n");
-            Console.Write("------------------------------------");
-            Console.Write("\n\n");
-
-            Console.Write("Input the 1st number :");
-            num1 = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Input the  2nd number :");
-            num2 = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Input the 3rd  number :");
-            num3 = Convert.ToInt32(Console.ReadLine());
-
-            if (num1 > num2)
-            {
-                if (num1 > num3)
-                {
-                    Console.Write("The 1st Number is the greatest among three. \n\n");
-                }
-                else
-                {
-                    Console.Write("The 3rd Number is the greatest among three. \n\n");
-                }
-            }
-            else if (num2 > num3)
-                Console.Write("The 2nd Number is the greatest among three \n\n");
-            else
-                Console.Write("The 3rd Number is the greatest among three \n\n");
-        }
-
+        int number1, number2, temp;
+        Console.Write("\nInput the First Number : ");
+        number1 = int.Parse(Console.ReadLine());
+        Console.Write("\nInput the Second Number : ");
+        number2 = int.Parse(Console.ReadLine());
+        temp = number1;
+        number1 = number2;
+        number2 = temp;
+        Console.Write("\nAfter Swapping : ");
+        Console.Write("\nFirst Number : " + number1);
+        Console.Write("\nSecond Number : " + number2);
+        Console.Read();
     }
+
 }
